@@ -16,12 +16,19 @@ bool isSorted(const std::vector<int>& values) {
 }
 
 void bubbleSort(vector<int>& values) {
+    bool isSwapped;
+    
     for (int i = 0; i < values.size() - 1; i++) {
-        
-        for (int j = i; j < values.size() - 1; j++) {
-            if (values[i] > values[j + 1]) {
-                swap(values[i], values[j + 1]);
+        isSwapped = false;
+        for (int j = 0; j < values.size() - 1 - i; j++) {
+            if (values[j] > values[j + 1]) {
+                swap(values[j], values[j + 1]);
+                isSwapped = true;
             }
+        }
+        
+        if (isSwapped == false) {
+            break;
         }
     }
 }
