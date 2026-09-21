@@ -110,14 +110,15 @@ int main() {
     vector<int> reversed;
     vector<int> sorted;
     
-    for (int i = 90; i > 0; i--) {
+    for (int i = 900; i > 0; i--) {
         reversed.push_back(i);
     }
-    for (int i = 0; i < 110; i++) {
+    for (int i = 0; i < 1100; i++) {
         sorted.push_back(i);
     }
-    
-    
+    for (int i = 0; i < 4; i++) {
+        unsorted.insert(unsorted.begin(), unsorted.begin(), unsorted.end());
+    }
 
     vector<vector<int>> test_vectors;
 
